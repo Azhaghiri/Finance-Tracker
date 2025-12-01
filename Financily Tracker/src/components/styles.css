@@ -1,0 +1,487 @@
+.navbar{
+    background-color: blue;
+    padding: 0.5rem 1.5rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar h3{
+    color: white;
+    font-weight: 500;
+}
+
+.navbar p {
+    color: rgb(194, 183, 183);
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 17px;
+}
+
+.navbar p:hover{
+    color: white;
+    transition: all 0.3s;
+}
+.signup-wrapper{
+    box-shadow: 0px 0px 30px 8px rgba(227, 227, 227, 0.75);
+    width: 25%;
+    max-width: 100%;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+/* mediaquery in signup-wrapper */
+@media (max-width: 768px) {
+  .signup-wrapper {
+    width: 75%;
+    padding: 1.5rem;
+  }
+}
+
+
+.title{
+    text-align: center;
+}
+
+.inputs{
+ text-transform: uppercase;
+ margin-bottom: 0.5rem;
+}
+.input-label{
+    margin-bottom: 5px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+.input-text{
+    border-width: 0;
+    border-bottom-width: 1px;
+    width: 100%;
+    padding: 0.5rem 0rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.input-text:focus{
+    outline: none;
+    opacity: 1;
+    transition: all 0.2s;
+}
+
+.btn{
+    color: blue;
+    background-color: #fff;
+    text-align: center;
+    width: 100%;
+    margin: 0.5rem 0rem;
+    padding: 0.5rem !important;
+    border: 1px solid blue;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: auto !important;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.btn:hover{
+    background-color: blue;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.btn-blue{
+    background-color: blue;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    margin: 0.5rem 0rem;
+    padding: 0.5rem !important;
+    border: 1px solid blue;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    height: auto !important;
+}
+
+.btn-blue:hover{
+    background-color: #fff !important;
+    color: blue;
+    transition: all 0.3s;
+    border: 1px solid blue;
+}
+.mycard{
+    box-shadow: 0px 0px 30px 8px rgba(227, 227, 227, 0.75);
+    min-width: 300px;
+    font-weight: 700;
+    margin: 2rem;
+    flex: 1;
+    border-radius: 0.5rem;
+}
+
+.myrow{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem ;
+    width: 90%;
+    gap: 16px;
+}
+
+/* media query in cards */
+/* ---------- Mobile (max-width: 576px) ---------- */
+@media (max-width: 576px) {
+  .myrow {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .mycard {
+    width: 90%;
+    margin: 1rem 0;
+    min-width: unset; 
+  }
+}
+
+
+/* ---------- Tablet (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+  .myrow {
+    justify-content: center;
+  }
+
+  .mycard {
+    flex: 0 0 45%;   /* 2 cards per row */
+    min-width: 250px;
+  }
+}
+
+
+/* ---------- Small Laptop (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+  .myrow {
+    gap: 20px;
+  }
+
+  .mycard {
+    flex: 0 0 30%;   /* 3 cards per row */
+  }
+}
+
+
+/* styles */
+/* ===== Inputs & Select layout ===== */
+.input-fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 6px 0;
+}
+
+/* search area: icon + input */
+.input-flex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;            /* take remaining space */
+  min-width: 0;
+}
+
+.input-flex i {
+  font-size: 18px;
+  color: #6b6b6b;
+  width: 28px;
+  text-align: center;
+}
+
+/* native input style (search box) */
+.input-flex input {
+  margin-right: 10px;       /* allow child to shrink (important for input overflow) */
+  flex: 1;
+  min-width: 0;              /* important for responsiveness */
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  background: #fff;
+  outline: none;
+  font-size: 14px;
+  transition: box-shadow .12s ease, border-color .12s ease;
+   box-shadow: 0px 0px 30px 8px rgba(227, 227, 227, 0.75);
+}
+
+/* focus state */
+.input-flex input:focus {
+  border-color: #7cb305; /* green-ish */
+  box-shadow: 0 4px 18px rgba(124,179,5,0.08);
+}
+
+/* Select wrapper */
+.input-select {
+  width: 200px;              /* default width on desktop */
+  margin-left: 8px;
+  margin-right: 19px;
+   box-shadow: 0px 0px 30px 8px rgba(255, 254, 254, 0.75);
+  
+}
+
+
+/* make antd select visually match (selector adjustment) */
+.select-input .ant-select-selector {
+  border-radius: 8px !important;
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+}
+
+/* small visual tweak for options list */
+.select-input .ant-select-arrow {
+  color: #333;
+}
+
+
+/* ===== Responsive: tablet and below ===== */
+@media (max-width: 992px) {
+  .input-select {
+    width: 180px;
+  }
+  .input-flex input {
+    font-size: 14px;
+  }
+}
+
+/* ===== Mobile: stack vertically ===== */
+@media (max-width: 600px) {
+  .input-fields {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .input-flex {
+    width: 90%;
+    margin-left: 15px;
+  }
+
+  .input-flex i {
+    width: 36px;
+    font-size: 16px;
+  }
+
+  .input-flex input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+
+  .input-select {
+    width: 100%;
+    margin-left: 25%;
+  }
+
+  /* Make the antd select full width on mobile */
+  .select-input {
+    display: block;
+    width: 100%;
+  }
+
+  .select-input .ant-select-selector {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+}
+
+/* ===== Tiny screens: tighten spacing ===== */
+@media (max-width: 360px) {
+  .input-flex i { font-size: 14px; width: 30px; }
+  .input-flex input { padding: 8px 10px; font-size: 14px; }
+  .select-input .ant-select-selector { min-height: 36px; }
+}
+
+/* ===== My Transactions Header & Controls ===== */
+.secont-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin: 16px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  flex-wrap: wrap; /* helpful for smaller screens */
+  gap: 12px;
+}
+
+.secont-input h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* ===== Radio Group Styling ===== */
+.input-radio {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.input-radio .ant-radio-button-wrapper {
+  border-radius: 6px !important;
+  padding: 6px 14px;
+  font-size: 14px;
+  border: 1px solid #d9d9d9 !important;
+  transition: all .2s ease;
+}
+
+.input-radio .ant-radio-button-wrapper:not(:first-child)::before {
+  display: none; /* remove the antd inner separator line */
+}
+
+.input-radio .ant-radio-button-wrapper:hover {
+  border-color: #40a9ff !important;
+  color: #40a9ff;
+}
+
+.input-radio .ant-radio-button-wrapper-checked {
+  background: #40a9ff !important;
+  color: #fff !important;
+  border-color: #40a9ff !important;
+}
+
+/* ===== Responsive Adjustments ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .secont-input {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .input-radio {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .secont-input {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .input-radio {
+    justify-content: center;
+  }
+}
+
+/* Main chart container */
+.chart-container {
+  width: 80%;               /* same as your inline width */
+  max-width: 1800px;
+  margin: 30px auto;
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+/* Each chart box */
+.wrapperchart1,
+.wrapperchart2 {
+  flex: 1;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+/* Chart title */
+.chart-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Force charts inside to scale correctly */
+/* .chart-container canvas,
+.chart-container svg {
+  width: 100% !important;
+  height: 100% !important;
+} */
+
+/* ----------------- MEDIA QUERIES ----------------- */
+
+/* Tablet breakpoint */
+@media (max-width: 900px) {
+  .chart-container {
+    width: 90%;
+    flex-wrap: wrap;       /* stack charts */
+  }
+
+  .wrapperchart1,
+  .wrapperchart2 {
+    flex-basis: 100%;
+    min-height: 280px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+  .chart-container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 8px;
+    gap: 15px;
+    flex-direction: column;
+  }
+
+  .wrapperchart1,
+  .wrapperchart2 {
+    padding: 10px;
+    width:350px;
+    min-height: 250px;
+  }
+
+  .chart-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 380px) {
+  .chart-container {
+    gap: 10px;
+  }
+
+  .wrapperchart1,
+  .wrapperchart2 {
+    min-height: 220px;
+  }
+
+  .chart-title {
+    font-size: 15px;
+  }
+}
+
+.spending-tag{
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-right: 6px;
+  color: #6b6b6b;
+}
